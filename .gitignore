@@ -1,5 +1,5 @@
 .idea/
-
+.DS_Store
 
 ## video
 
@@ -11,3 +11,7 @@
 *.jpg
 *.png
 *.webp
+
+## package
+
+*.zip
