@@ -1,0 +1,13 @@
+.idea/
+
+
+## video
+
+*.avi
+*.mp4
+
+## image
+
+*.jpg
+*.png
+*.webp
