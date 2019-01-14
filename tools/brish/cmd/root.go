@@ -43,6 +43,9 @@ func init() {
 
 	rootCmd.AddCommand(genNewCmd())
 	rootCmd.AddCommand(genConfigCmd())
+	rootCmd.AddCommand(genPushCmd())
+	rootCmd.AddCommand(genPullCmd())
+	rootCmd.AddCommand(genGatherCmd())
 
 	rootCmd.PersistentPreRun = func(cmd *cobra.Command, args []string) {
 		if cmd.Use != "config" {

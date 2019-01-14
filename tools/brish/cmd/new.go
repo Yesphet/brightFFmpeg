@@ -24,9 +24,9 @@ func genNewCmd() *cobra.Command {
 	cmd.MarkFlagRequired("name")
 
 	cmd.Run = func(cmd *cobra.Command, args []string) {
-		egPath := filepath.Join(globalCtx.BrightFFmpegPath, "examples", ctx.name)
+		egPath := globalCtx.ExamplePath(ctx.name)
 		if utils.IsExist(egPath) {
-			Fatalf("Example %s is exist", ctx.name)
+			Fatalf("Example %s already exist", ctx.name)
 		}
 
 		err := utils.Makedir(egPath)
@@ -54,7 +54,7 @@ Tags:
 
 ## Introduction
 
-Introduce Briefly
+Introduce briefly
 
 ## Description
 

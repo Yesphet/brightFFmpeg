@@ -21,6 +21,11 @@ type Config struct {
 	BrightFFmpegPath string
 }
 
+func (c *Config) ExamplePath(name string) string {
+	egPath := filepath.Join(globalCtx.BrightFFmpegPath, "examples", name)
+	return egPath
+}
+
 func readConfig() {
 	path := configPath()
 	if !utils.IsExist(path) {
